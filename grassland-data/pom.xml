@@ -12,5 +12,11 @@
 
     <artifactId>grassland-data</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>me.limx.grassland</groupId>
+            <artifactId>grassland-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -1,9 +1,11 @@
 package me.limx.grassland.service;
 
 import me.limx.grassland.api.FooService;
-import me.limx.grassland.data.CityMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import me.limx.grassland.data.OrderMapper;
+import me.limx.grassland.domain.Order;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author: limingxing
@@ -12,11 +14,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class FooServiceImpl implements FooService {
 
-    @Autowired
-    private CityMapper cityMapper;
+    @Resource
+    private OrderMapper orderMapper;
 
     @Override
     public String bar() {
-        return String.valueOf(cityMapper.findByState());
+        Order orderEntity = orderMapper.selectOrder();
+        return String.valueOf(orderEntity.getOrderId());
     }
 }
