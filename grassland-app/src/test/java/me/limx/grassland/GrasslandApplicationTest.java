@@ -1,11 +1,14 @@
 package me.limx.grassland;
 
-import me.limx.grassland.api.FooService;
+import me.limx.grassland.api.OrderService;
+import me.limx.grassland.api.dto.OrderDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 /**
  * @author: limingxing
@@ -16,11 +19,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class GrasslandApplicationTest {
 
     @Autowired
-    FooService fooService;
+    OrderService fooService;
 
     @Test
     public void test() {
-        String x = fooService.bar();
-        assert x.equals("1");
+        List<OrderDto> x = fooService.getOrders();
+        assert x.size() == 1;
     }
 }

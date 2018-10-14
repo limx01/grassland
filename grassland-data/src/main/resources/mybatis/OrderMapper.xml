@@ -7,7 +7,7 @@
         <result column="order_id" property="orderId" jdbcType="BIGINT" />
     </resultMap>
 
-    <select id="selectOrder" resultMap="baseResultMap">
+    <select id="selectOrders" resultMap="baseResultMap">
         select * from tb_order
     </select>
 </mapper>
