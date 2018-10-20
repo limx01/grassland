@@ -22,7 +22,6 @@ public class GrasslandApplication {
         logger.error("Sample Error Message");
     }
 
-
     public static void main(String[] args) {
         SpringApplication.run(GrasslandApplication.class, args);
     }

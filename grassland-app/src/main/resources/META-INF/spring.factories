@@ -1,0 +1,2 @@
+org.springframework.boot.SpringApplicationRunListener=me.limx.grassland.config.MissEnvironmentInitializer
+org.springframework.boot.env.EnvironmentPostProcessor=me.limx.grassland.config.MissConfPostProcessor
